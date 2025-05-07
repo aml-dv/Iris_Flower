@@ -2,38 +2,94 @@
 <html lang="en">
 <head>
     <title>Input Features</title>
+    <link href="./static/css/main.css" rel="stylesheet" />
     <script>
         function updateValue(slider, outputId) {
             document.getElementById(outputId).innerText = slider.value;
         }
     </script>
+    <style>
+        input[type="range"] {
+          -webkit-appearance: none;  /* Remove default styling in Chrome/Safari */
+          width: 300px;
+          height: 8px;
+          background: #ddd;
+          border-radius: 5px;
+          outline: none;
+          margin: 10px 0;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 20px;
+          height: 20px;
+          background:rgb(153, 107, 232);
+          border-radius: 50%;
+          cursor: pointer;
+          transition: background 0.3s ease;
+          border: none;
+          box-shadow: 0 0 2px rgba(0,0,0,0.3);
+        }
+        
+        input[type="range"]::-webkit-slider-thumb:hover {
+          background:rgb(216, 236, 116);
+        }
+        
+        input[type="range"]::-moz-range-thumb {
+          width: 20px;
+          height: 20px;
+          background:rgb(153, 107, 232);
+          border-radius: 50%;
+          cursor: pointer;
+          border: none;
+        }
+        input.tab{margin-left:100px;}
+        </style>
+        
 </head>
-<body>
+<body background="./static/pexels-chris-f-38966-17013937.jpg">
     <h1>Enter Iris Flower Features</h1>
-    <form action="/predict" method="post">
-        <label>Sepal Length:</label>
-        <input type="range" id="sepal_length" name="sepal_length" min="4" max="8" step="0.1" value="6" 
-               oninput="updateValue(this, 'sepal_length_value')">
-        <span id="sepal_length_value">6</span>
-        <br><br>
-
-        <label>Sepal Width:</label>
-        <input type="range" id="sepal_width" name="sepal_width" min="2" max="5" step="0.1" value="3" 
-               oninput="updateValue(this, 'sepal_width_value')">
-        <span id="sepal_width_value">3</span>
-        <br><br>
-
-        <label>Petal Length:</label>
-        <input type="range" id="petal_length" name="petal_length" min="1" max="7" step="0.1" value="4" 
-               oninput="updateValue(this, 'petal_length_value')">
-        <span id="petal_length_value">4</span>
-        <br><br>
-
-        <label>Petal Width:</label>
-        <input type="range" id="petal_width" name="petal_width" min="0.1" max="3" step="0.1" value="1" 
-               oninput="updateValue(this, 'petal_width_value')">
-        <span id="petal_width_value">1</span>
-        <br><br>
+    <form class="cont" action="/predict" method="post" style="margin-top:10%">
+        <table style="margin-top: 20px;">
+            <tr>
+              <td><label for="sepal_length">Sepal Length</label></td>
+              <td>
+                <input class="tab" type="range" id="sepal_length" name="sepal_length" min="4" max="8" step="0.1" value="6"
+                       oninput="updateValue(this, 'sepal_length_value')">
+                <span id="sepal_length_value">6</span>
+              </td>
+            </tr>
+          
+            <tr>
+              <td><label for="sepal_width">Sepal Width</label></td>
+              <td>
+                <input class="tab" type="range" id="sepal_width" name="sepal_width" min="2" max="5" step="0.1" value="3"
+                       oninput="updateValue(this, 'sepal_width_value')">
+                <span id="sepal_width_value">3</span>
+              </td>
+            </tr>
+          
+            <tr>
+              <td><label for="petal_length">Petal Length</label></td>
+              <td>
+                <input class="tab" type="range" id="petal_length" name="petal_length" min="1" max="7" step="0.1" value="4"
+                       oninput="updateValue(this, 'petal_length_value')">
+                <span id="petal_length_value">4</span>
+              </td>
+            </tr>
+          
+            <tr>
+              <td><label for="petal_width">Petal Width</label></td>
+              <td>
+                <input class="tab" type="range" id="petal_width" name="petal_width" min="0.1" max="3" step="0.1" value="1"
+                       oninput="updateValue(this, 'petal_width_value')">
+                <span id="petal_width_value">1</span>
+              </td>
+            </tr>
+            <tr><td><br/></td></tr>
+          </table>
+          
 
         <button type="submit">Predict</button>
     </form>

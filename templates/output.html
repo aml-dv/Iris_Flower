@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="./static/css/main.css" rel="stylesheet" />
     <title>Prediction Result</title>
 </head>
-<body>
+<body background="./static/pexels-chris-f-38966-17013937.jpg">
     <h1>Prediction Result</h1>
-    <p>The predicted species is: <strong>{{ prediction }}</strong></p>
-    <a href="/input">Try Again</a>
+    <div class="text">The predicted species is <strong>{{ prediction }}</strong></p>
+    <form action="/input" method="get">
+        <button type="submit">Try Again</form>
 </body>
 </html>

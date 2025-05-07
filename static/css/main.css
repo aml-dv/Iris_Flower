@@ -1,0 +1,51 @@
+h1{
+    padding-top:100px;
+    color: rgb(255, 255, 255);
+    font-family: Delius;
+    text-align: center;
+}
+button{
+    /* line-height: 1000px; */
+    font-family: poppins;
+    font-size: 14pt;
+    padding: 10px 70px;
+    background-color: rgb(208, 159, 236);
+    color: blueviolet;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    margin-left: 25%;
+    
+}
+body{
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+div.text{
+    background-color: rgba(255, 255, 255, 0.154);
+    border-radius: 30px;
+    font-size: 18px;
+    padding: 50px 50px;
+    font-family: poppins;
+    text-align: justify;
+    float: left;
+    width: 40%;
+    line-height: 30px;
+}
+button:hover{
+    background-color: rgb(168, 107, 226);color: rgb(219, 203, 227);
+}
+button:active{background-color: rgb(255, 255, 193);}
+.cont{
+    font-family: poppins;
+    font-size: 14pt;
+    padding: 50px 50px;
+    background-color: rgba(255, 255, 255, 0.154);
+    float: left;
+    width: 40%;
+    padding-left:50px;
+    border-radius: 30px;
+}
+tr{line-height: 40px;}
+strong{font-size: 18pt;color: rgb(62, 19, 114);}
